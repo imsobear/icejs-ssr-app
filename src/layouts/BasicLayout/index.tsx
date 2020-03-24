@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Shell, ConfigProvider } from '@alifd/next';
 import PageNav from './components/PageNav';
 import Logo from './components/Logo';
@@ -11,30 +11,10 @@ export default function BasicLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const getDevice = (width: number) => {
-    const isPhone =
-      typeof navigator !== 'undefined' &&
-      navigator &&
-      navigator.userAgent.match(/phone/gi);
-
-    if (width < 680 || isPhone) {
-      return 'phone';
-    } else if (width < 1280 && width > 680) {
-      return 'tablet';
-    } else {
-      return 'desktop';
-    }
-  };
-
   const [userState] = store.useModel('user');
 
-  const [device, setDevice] = useState(getDevice(NaN));
-  window.addEventListener('optimizedResize', e => {
-    setDevice(getDevice(e && e.target && e.target.innerWidth));
-  });
-
   return (
-    <ConfigProvider device={device}>
+    <ConfigProvider>
       <Shell
         type="dark"
         style={{

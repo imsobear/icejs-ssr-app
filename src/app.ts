@@ -19,6 +19,9 @@ const appConfig: IAppConfig = {
 
     }
   },
+  router: {
+    // type: 'hash'
+  },
   store: {
     getInitialStates: (initialData) => {
       return initialData;

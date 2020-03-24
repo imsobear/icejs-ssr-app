@@ -1,11 +1,11 @@
 // mock/index.js
 module.exports = {
   // 同时支持 GET 和 POST
-  '/api/app/data.png': {
+  '/api/app/data': {
     user: {
       username: '淘小宝'
     }
-   },
+  },
   // 支持参数
   '/api/repo/list': (req, res) => {
     res.send({
