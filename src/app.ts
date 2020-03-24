@@ -5,12 +5,12 @@ const appConfig: IAppConfig = {
     rootId: 'ice-container',
     getInitialData: async () => {
       try {
-        // const data = await request('http://127.0.0.1:3333/api/app/data');
-        const data = await new Promise(resolve => {
-          setTimeout(() => {
-            resolve({ user: {username: '淘小宝啊'}})
-          }, 0.5 * 1000);
-        })
+        const data = await request('http://127.0.0.1:3333/api/app/data');
+        // const data = await new Promise(resolve => {
+        //   setTimeout(() => {
+        //     resolve({ user: {username: '淘小宝啊'}})
+        //   }, 0.5 * 1000);
+        // })
         return data;
       } catch(err) {
         console.error('getInitialData error', err);
@@ -18,6 +18,9 @@ const appConfig: IAppConfig = {
       }
 
     }
+  },
+  router: {
+    // type: 'hash'
   },
   store: {
     getInitialStates: (initialData) => {

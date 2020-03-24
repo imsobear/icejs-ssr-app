@@ -14,7 +14,7 @@
     "build-plugin-fusion": "^0.1.0",
     "build-plugin-moment-locales": "^0.1.0",
     "eslint": "^6.0.1",
-    "ice.js": "^1.0.0",
+    "ice.js": "beta",
     "stylelint": "^13.2.0",
     "@ali/build-plugin-ice-def": "^0.1.0"
   },
