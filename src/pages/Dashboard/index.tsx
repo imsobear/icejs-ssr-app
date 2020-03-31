@@ -15,7 +15,7 @@ const Dashboard = ({ dataSource }) => {
 };
 
 Dashboard.getInitialProps = async () => {
-  const result = await request('/api/repi/list');
+  const result = await request('/api/repo/list');
   return result;
 }
 
