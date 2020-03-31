@@ -2,8 +2,13 @@ const headerMenuConfig = [];
 
 const asideMenuConfig = [
   {
-    name: 'Dashboard',
+    name: 'Home',
     path: '/',
+    icon: 'smile',
+  },
+  {
+    name: 'Dashboard',
+    path: '/dashboard',
     icon: 'smile',
   },
 ];

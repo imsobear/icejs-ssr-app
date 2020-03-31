@@ -1,5 +1,6 @@
 import BasicLayout from '@/layouts/BasicLayout';
 import Dashboard from '@/pages/Dashboard';
+import Home from '@/pages/Home';
 
 const routerConfig = [
   {
@@ -8,6 +9,11 @@ const routerConfig = [
     children: [
       {
         path: '/',
+        exact: true,
+        component: Home,
+      },
+      {
+        path: '/dashboard',
         exact: true,
         component: Dashboard,
       },

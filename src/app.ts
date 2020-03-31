@@ -1,26 +1,15 @@
-import { createApp, request, IAppConfig } from 'ice';
+import { createApp, request, IAppConfig, config } from 'ice';
 
 const appConfig: IAppConfig = {
   app: {
     rootId: 'ice-container',
     getInitialData: async () => {
-      try {
-        const data = await request('http://127.0.0.1:3333/api/app/data');
-        // const data = await new Promise(resolve => {
-        //   setTimeout(() => {
-        //     resolve({ user: {username: '淘小宝啊'}})
-        //   }, 0.5 * 1000);
-        // })
-        return data;
-      } catch(err) {
-        console.error('getInitialData error', err);
-        return {};
-      }
-
+      const data = await request('/api/app/data');
+      return data;
     }
   },
   router: {
-    // type: 'hash'
+    type: 'browser'
   },
   store: {
     getInitialStates: (initialData) => {
@@ -28,7 +17,7 @@ const appConfig: IAppConfig = {
     }
   },
   request: {
-    baseURL: '/api',
+    baseURL: config.apiURL,
   }
 };
 
