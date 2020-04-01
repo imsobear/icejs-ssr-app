@@ -1,7 +1,7 @@
 
 ## icejs + SSR
 
-https://img.alicdn.com/tfs/TB1iHZpAaL7gK0jSZFBXXXZZpXa-1860-1124.png
+![](https://img.alicdn.com/tfs/TB1iHZpAaL7gK0jSZFBXXXZZpXa-1860-1124.png)
 
 ## Quick Start
 
